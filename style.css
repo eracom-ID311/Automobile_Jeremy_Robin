@@ -1,0 +1,43 @@
+body {
+}
+
+/* quelques classes utiles */
+/* colone */
+.row {
+  display: flex;
+}
+
+/* centrer */
+.center {
+  align-items: center;
+  justify-content: center;
+}
+
+/* image */
+.img {
+  max-width: 100%;
+}
+
+/* couleur */
+h1 {
+}
+h1 {
+}
+h2 {
+}
+h3 {
+}
+h4 {
+}
+
+/* taille et caractéristique */
+h1 {
+}
+h1 {
+}
+h2 {
+}
+h3 {
+}
+h4 {
+}
