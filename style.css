@@ -1,9 +1,11 @@
-body {
+body,
+html {
+  margin: 0;
 }
 
 /* polices import font officiel Formule 1 */
 @font-face {
-  font-family: "Formula1";
+  font-family: "Formula1", sans-serif;
   src: url(/fonts/Formula1-Regular_web_0.ttf) format("truetype");
   src: url(/fonts/Formula1-Bold_web_0.ttf) format("truetype");
 }
@@ -36,15 +38,44 @@ h3 {
 }
 h4 {
 }
+p {
+}
 
 /* taille et caractéristique */
 h1 {
+  font-family: "Formula1", sans-serif;
+  font-weight: bold;
 }
 h1 {
 }
 h2 {
 }
 h3 {
+  font-family: "Formula1", sans-serif;
+  font-weight: bold;
 }
 h4 {
+}
+p {
+  font-family: "Formula1", sans-serif;
+}
+
+/* page 1 – Track – */
+.Track {
+}
+.name-track {
+}
+
+.specs-track {
+}
+.Lenght {
+}
+
+.WorldRecordTour {
+}
+
+.Built-in {
+}
+
+.ImgTrack {
 }
