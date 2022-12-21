@@ -3,6 +3,36 @@ html {
   margin: 0;
 }
 
+/* -------- Interactions avec le burger menu -------- */
+
+.burger {
+  position: relative;
+  cursor: pointer;
+}
+
+.burger span {
+  background: black;
+  display: block;
+  width: 35px;
+  height: 5px;
+  margin: 6px 0;
+}
+
+.menu {
+  position: absolute;
+  top: 20px;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgb(255, 0, 0);
+  transition: left 0.5s ease-in-out;
+  z-index: 2;
+}
+
+.menu.active {
+  left: 0;
+}
+
 /* polices import font officiel Formule 1 */
 @font-face {
   font-family: "Formula1", sans-serif;
@@ -64,18 +94,41 @@ p {
 .Track {
 }
 .name-track {
+  margin-top: 200px;
+  margin-left: 231px;
 }
 
 .specs-track {
+  display: flex;
 }
 .Lenght {
+  position: absolute;
+  width: 107px;
+  height: 58px;
+  left: 231px;
+  top: 731px;
 }
 
 .WorldRecordTour {
+  position: absolute;
+  width: 244px;
+  height: 58px;
+  left: 429px;
+  top: 731px;
 }
 
 .Built-in {
+  position: absolute;
+  width: 103px;
+  height: 58px;
+  left: 761px;
+  top: 731px;
 }
 
 .ImgTrack {
+  position: absolute;
+  width: 1265px;
+  height: 394px;
+  left: 231px;
+  top: 250px;
 }
