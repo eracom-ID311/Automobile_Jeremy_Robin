@@ -3,36 +3,156 @@ html {
   margin: 0;
 }
 
-/* scroll horizontal */
+/* --------- scroll horizontal --------- */
+
+.slide {
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.blocHorizontal {
+  display: flex;
+  flex-direction: row;
+  width: 400vw;
+  transform: rotate(90deg) translateY(-100vh);
+  transform-origin: top left;
+}
+
+.container {
+  width: 100vh;
+  height: 100vw;
+  transform: rotate(-90deg) translateX(-100vh);
+  transform-origin: top left;
+}
+
+.one {
+  background: rgb(255, 255, 255);
+}
+.two {
+  background-image: url(/images/fond-page2.png);
+  z-index: -1;
+}
+.three {
+  background-color: #000000;
+}
+/* -------- Scroll design ---------- */
 
 /* -------- Interactions avec le burger menu -------- */
 
-.burger {
-  position: relative;
-  cursor: pointer;
+body {
+  margin: 0;
+  padding: 0;
+
+  background: #ececec;
+  font-family: "Formula1", sans-serif;
 }
 
-.burger span {
-  background: black;
+#menuToggle {
   display: block;
-  width: 35px;
-  height: 5px;
-  margin: 6px 0;
+  position: relative;
+  top: 50px;
+  left: 50px;
+
+  z-index: 1;
+
+  -webkit-user-select: none;
+  user-select: none;
 }
 
-.menu {
+#menuToggle a {
+  text-decoration: none;
+  color: #232323;
+
+  transition: color 0.3s ease;
+}
+
+#menuToggle a:hover {
+  color: rgb(255, 0, 0);
+}
+
+#menuToggle input {
+  display: block;
+  width: 20px;
+  height: 32px;
   position: absolute;
-  top: 20px;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: rgb(255, 0, 0);
-  transition: left 0.5s ease-in-out;
+  top: -7px;
+  left: -5px;
+
+  cursor: pointer;
+
+  opacity: 0;
   z-index: 2;
+
+  -webkit-touch-callout: none;
 }
 
-.menu.active {
-  left: 0;
+#menuToggle span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+
+  background: #e50000;
+  border-radius: 3px;
+
+  z-index: 1;
+
+  transform-origin: 4px 0px;
+
+  transition: transform 1s cubic-bezier(0.77, 0.2, 0.05, 1),
+    background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+}
+
+#menuToggle span:first-child {
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2) {
+  transform-origin: 0% 100%;
+}
+
+#menuToggle input:checked ~ span {
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #000000;
+}
+
+#menuToggle input:checked ~ span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#menuToggle input:checked ~ span:nth-last-child(2) {
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+#menu {
+  position: absolute;
+  width: 200px;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+
+  background: transparent;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+
+#menu li {
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+#menuToggle input:checked ~ ul {
+  transform: none;
 }
 
 /* polices import font officiel Formule 1 */
