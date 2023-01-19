@@ -13,14 +13,14 @@
   }
 }
 
-fadeIn {
-  font-family: "FormulaOne";
+.fadeIn {
+  font-family: Arial;
 
-  animation: fadeIn 2s;
-  -webkit-animation: fadeIn 2s;
-  -moz-animation: fadeIn 2s;
-  -o-animation: fadeIn 2s;
-  -ms-animation: fadeIn 2s;
+  animation: fadeIn 5s;
+  -webkit-animation: fadeIn 5s;
+  -moz-animation: fadeIn 5s;
+  -o-animation: fadeIn 5s;
+  -ms-animation: fadeIn 5s;
 }
 
 body {
@@ -34,7 +34,7 @@ section {
 }
 
 .blue {
-  background-image: url(img/fond-page2.png);
+  background-image: url(images/fond-page2.png);
 }
 
 .green {
@@ -72,7 +72,7 @@ section {
   padding: 0 200px;
 }
 
-/* ----- menu burger------- */
+/* ---------menu burger ------------ */
 .menu-items {
   position: absolute;
   top: 0;
@@ -169,15 +169,15 @@ section {
   transform: translateX(0);
 }
 
-.nav-container input[type="checkbox"]:checked ~ .menu-items .line1 {
+.nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
   transform: rotate(45deg);
 }
 
-.nav-container input[type="checkbox"]:checked ~ .menu-items .line2 {
+.nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
   transform: scaleY(0);
 }
 
-.nav-container input[type="checkbox"]:checked ~ .menu-items .line3 {
+.nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
   transform: rotate(-45deg);
 }
 
